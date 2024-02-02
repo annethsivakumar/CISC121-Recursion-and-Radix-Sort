@@ -1,0 +1,604 @@
+"""
+Tests to check if char_prime function prints correct output for a series of cases.
+"""
+char_prime() - Test1
+### Check if valid capital letters prints correct unique prime number ###
+Enter a letter: A
+Unique Prime Number: 2  #Correct!
+
+char_prime() - Test2
+### Check if valid capital letters prints correct unique prime number ###
+Enter a letter: Z
+Unique Prime Number: 101  #Correct!
+
+char_prime() - Test3
+### Check if valid capital letters prints correct unique prime number ###
+Enter a letter: P
+Unique Prime Number: 53  #Correct!
+
+char_prime() - Test4
+### Check if lower case letters prints an error message ###
+Enter a letter: a
+Traceback (most recent call last):
+  File "main.py", line 33, in <module>
+    main()
+  File "main.py", line 18, in main
+    print(f"Unique Prime Number: {functions.char_prime(letter)}")
+  File "/home/runner/A4Q1/functions.py", line 31, in char_prime
+    prime_int = primes[my_char]
+KeyError: 'a'  #Correct!
+
+char_prime() - Test5
+### Check if lower case letters prints an error message ###
+Enter a letter: s
+Traceback (most recent call last):
+  File "main.py", line 33, in <module>
+    main()
+  File "main.py", line 18, in main
+    print(f"Unique Prime Number: {functions.char_prime(letter)}")
+  File "/home/runner/A4Q1/functions.py", line 31, in char_prime
+    prime_int = primes[my_char]
+KeyError: 's'  #Correct!
+
+char_prime() - Test6
+### Check if special characters prints an error message ###
+Enter a letter: ?
+Traceback (most recent call last):
+  File "main.py", line 33, in <module>
+    main()
+  File "main.py", line 18, in main
+    print(f"Unique Prime Number: {functions.char_prime(letter)}")
+  File "/home/runner/A4Q1/functions.py", line 31, in char_prime
+    prime_int = primes[my_char]
+KeyError: '?'  #Correct!
+
+char_prime() - Test7
+### Check if special characters prints an error message ###
+Enter a letter: !
+Traceback (most recent call last):
+  File "main.py", line 33, in <module>
+    main()
+  File "main.py", line 18, in main
+    print(f"Unique Prime Number: {functions.char_prime(letter)}")
+  File "/home/runner/A4Q1/functions.py", line 31, in char_prime
+    prime_int = primes[my_char]
+KeyError: '!'  #Correct!
+
+char_prime() - Test8
+### Check if numbers prints an error message ###
+Enter a letter: 4
+Traceback (most recent call last):
+  File "main.py", line 33, in <module>
+    main()
+  File "main.py", line 18, in main
+    print(f"Unique Prime Number: {functions.char_prime(letter)}")
+  File "/home/runner/A4Q1/functions.py", line 31, in char_prime
+    prime_int = primes[my_char]
+KeyError: '4'  #Correct!
+
+char_prime() - Test9
+### Check if numbers prints an error message ###
+Enter a letter: 21
+Traceback (most recent call last):
+  File "main.py", line 33, in <module>
+    main()
+  File "main.py", line 18, in main
+    print(f"Unique Prime Number: {functions.char_prime(letter)}")
+  File "/home/runner/A4Q1/functions.py", line 31, in char_prime
+    prime_int = primes[my_char]
+KeyError: '21'  #Correct!
+
+char_prime() - Test10
+### Check if adding whitespace prints an error message ###
+# Whitespace before the letter #
+Enter a word:  V
+Traceback (most recent call last):
+  File "main.py", line 33, in <module>
+    main()
+  File "main.py", line 18, in main
+    print(f"Product Of All Prime: {functions.char_prime(word)}")
+  File "/home/runner/A4Q1/functions.py", line 31, in char_prime
+    prime_int = primes[my_char]
+KeyError: ' V'  #Correct!
+
+char_prime() - Test11
+### Check if adding whitespace prints an error message ###
+# Whitespace after the letter #
+Enter a word: V 
+Traceback (most recent call last):
+  File "main.py", line 33, in <module>
+    main()
+  File "main.py", line 18, in main
+    print(f"Product Of All Prime: {functions.char_prime(word)}")
+  File "/home/runner/A4Q1/functions.py", line 31, in char_prime
+    prime_int = primes[my_char]
+KeyError: 'V '  #Correct!
+
+
+
+"""
+Tests to check if primeify function prints correct output for a series of cases.
+"""
+primeify() - Test1
+### Check if an all UPPERCASE word prints the correct product of prime output ###
+Enter a word: BANANA
+Product Of All Prime: 44376  #Correct!
+
+primeify() - Test2
+### Check if an all UPPERCASE word prints the correct product of prime output ###
+Enter a word: ANNETH
+Product Of All Prime: 54874622  #Correct!
+
+primeify() - Test3
+### Check if an all UPPERCASE word prints the correct product of prime output ###
+Enter a word: KINGSTON
+Product Of All Prime: 5010791958091  #Correct!
+
+primeify() - Test4
+### Check if lower case letters prints an error message ###
+Enter a word: apple
+Traceback (most recent call last):
+  File "main.py", line 33, in <module>
+    main()
+  File "main.py", line 18, in main
+    print(f"Product Of All Prime: {functions.primeify(word)}")
+  File "/home/runner/A4Q1/functions.py", line 52, in primeify
+    prime_product = char_prime(my_string[0]) * primeify(my_string[1:])
+  File "/home/runner/A4Q1/functions.py", line 31, in char_prime
+    prime_int = primes[my_char]
+KeyError: 'a' #Correct!
+
+primeify() - Test5
+### Check if lower case letters prints an error message ###
+Enter a word: sivakumar
+Traceback (most recent call last):
+  File "main.py", line 33, in <module>
+    main()
+  File "main.py", line 18, in main
+    print(f"Product Of All Prime: {functions.primeify(word)}")
+  File "/home/runner/A4Q1/functions.py", line 52, in primeify
+    prime_product = char_prime(my_string[0]) * primeify(my_string[1:])
+  File "/home/runner/A4Q1/functions.py", line 31, in char_prime
+    prime_int = primes[my_char]
+KeyError: 's' #Correct!
+
+primeify() - Test6
+### Check if special characters prints an error message ###
+Enter a word: $TEN
+Traceback (most recent call last):
+  File "main.py", line 33, in <module>
+    main()
+  File "main.py", line 18, in main
+    print(f"Product Of All Prime: {functions.primeify(word)}")
+  File "/home/runner/A4Q1/functions.py", line 52, in primeify
+    prime_product = char_prime(my_string[0]) * primeify(my_string[1:])
+  File "/home/runner/A4Q1/functions.py", line 31, in char_prime
+    prime_int = primes[my_char]
+KeyError: '$' #Correct!
+
+primeify() - Test7
+### Check if special characters prints an error message ###
+Enter a word: @ANNETH
+Traceback (most recent call last):
+  File "main.py", line 33, in <module>
+    main()
+  File "main.py", line 18, in main
+    print(f"Product Of All Prime: {functions.primeify(word)}")
+  File "/home/runner/A4Q1/functions.py", line 52, in primeify
+    prime_product = char_prime(my_string[0]) * primeify(my_string[1:])
+  File "/home/runner/A4Q1/functions.py", line 31, in char_prime
+    prime_int = primes[my_char]
+KeyError: '@' #Correct!
+
+primeify() - Test8
+### Check if numbers prints an error message ###
+Enter a word: 21CENTS
+Traceback (most recent call last):
+  File "main.py", line 33, in <module>
+    main()
+  File "main.py", line 18, in main
+    print(f"Product Of All Prime: {functions.primeify(word)}")
+  File "/home/runner/A4Q1/functions.py", line 52, in primeify
+    prime_product = char_prime(my_string[0]) * primeify(my_string[1:])
+  File "/home/runner/A4Q1/functions.py", line 31, in char_prime
+    prime_int = primes[my_char]
+KeyError: '2' #Correct!
+
+primeify() - Test9
+### Check if numbers prints an error message ###
+Enter a word: 50DOGS
+Traceback (most recent call last):
+  File "main.py", line 33, in <module>
+    main()
+  File "main.py", line 18, in main
+    print(f"Product Of All Prime: {functions.primeify(word)}")
+  File "/home/runner/A4Q1/functions.py", line 52, in primeify
+    prime_product = char_prime(my_string[0]) * primeify(my_string[1:])
+  File "/home/runner/A4Q1/functions.py", line 31, in char_prime
+    prime_int = primes[my_char]
+KeyError: '5' #Correct!
+
+primeify() - Test10
+### Check if adding whitespace prints an error message ###
+# Whitespace before the word #
+Enter a word:  APPLE
+Traceback (most recent call last):
+  File "main.py", line 33, in <module>
+    main()
+  File "main.py", line 18, in main
+    print(f"Product Of All Prime: {functions.primeify(word)}")
+  File "/home/runner/A4Q1/functions.py", line 52, in primeify
+    prime_product = char_prime(my_string[0]) * primeify(my_string[1:])
+  File "/home/runner/A4Q1/functions.py", line 31, in char_prime
+    prime_int = primes[my_char]
+KeyError: ' '  #Correct!
+
+primeify() - Test11
+### Check if adding whitespace prints an error message ###
+# Whitespace after the word #
+Enter a word: CARS 
+Traceback (most recent call last):
+  File "main.py", line 33, in <module>
+    main()
+  File "main.py", line 18, in main
+    print(f"Product Of All Prime: {functions.primeify(word)}")
+  File "/home/runner/A4Q1/functions.py", line 52, in primeify
+    prime_product = char_prime(my_string[0]) * primeify(my_string[1:])
+  File "/home/runner/A4Q1/functions.py", line 52, in primeify
+    prime_product = char_prime(my_string[0]) * primeify(my_string[1:])
+  File "/home/runner/A4Q1/functions.py", line 52, in primeify
+    prime_product = char_prime(my_string[0]) * primeify(my_string[1:])
+  [Previous line repeated 2 more times]
+  File "/home/runner/A4Q1/functions.py", line 31, in char_prime
+    prime_int = primes[my_char]
+KeyError: ' '  #Correct!
+
+primeify() - Test12
+### Check if adding whitespace prints an error message ###
+# Whitespace between two word #
+Enter a word: THANK YOU 
+Traceback (most recent call last):
+  File "main.py", line 33, in <module>
+    main()
+  File "main.py", line 18, in main
+    print(f"Product Of All Prime: {functions.primeify(word)}")
+  File "/home/runner/A4Q1/functions.py", line 52, in primeify
+    prime_product = char_prime(my_string[0]) * primeify(my_string[1:])
+  File "/home/runner/A4Q1/functions.py", line 52, in primeify
+    prime_product = char_prime(my_string[0]) * primeify(my_string[1:])
+  File "/home/runner/A4Q1/functions.py", line 52, in primeify
+    prime_product = char_prime(my_string[0]) * primeify(my_string[1:])
+  [Previous line repeated 2 more times]
+  File "/home/runner/A4Q1/functions.py", line 31, in char_prime
+    prime_int = primes[my_char]
+KeyError: ' '  #Correct!
+
+
+
+"""
+Tests to check if is_anagram function prints correct output for a series of cases.
+"""
+is_anagram() - Test1
+### Check if anagrams print True ###
+Enter first word: RACECAR
+Enter second word: CARRACE
+WORD1 & WORD2 ARE ANAGRAMS: True  #Correct!
+
+is_anagram() - Test2
+### Check if anagrams print True ###
+Enter first word: EARTH
+Enter second word: HEART
+WORD1 & WORD2 ARE ANAGRAMS: True  #Correct!
+
+is_anagram() - Test3
+### Check if anagrams print False ###
+Enter first word: JAMES
+Enter second word: ANNETH
+WORD1 & WORD2 ARE ANAGRAMS: False  #Correct!
+
+is_anagram() - Test4
+### Check if anagrams print False ###
+Enter first word: CAT
+Enter second word: DOG
+WORD1 & WORD2 ARE ANAGRAMS: False  #Correct!
+
+is_anagram() - Test5
+### Check if lower case letters prints an error message ###
+Enter first word: earth
+Enter second word: heart
+Traceback (most recent call last):
+  File "main.py", line 34, in <module>
+    main()
+  File "main.py", line 19, in main
+    print(f"WORD1 & WORD2 ARE ANAGRAMS: {functions.is_anagram(word_1, word_2)}")
+  File "/home/runner/A4Q1/functions.py", line 69, in is_anagram
+    return primeify(string1) == primeify(string2)
+  File "/home/runner/A4Q1/functions.py", line 52, in primeify
+    prime_product = char_prime(my_string[0]) * primeify(my_string[1:])
+  File "/home/runner/A4Q1/functions.py", line 31, in char_prime
+    prime_int = primes[my_char]
+KeyError: 'e'  #Correct!
+
+is_anagram() - Test6
+### Check if lower case letters prints an error message ###
+Enter first word: race
+Enter second word: care
+Traceback (most recent call last):
+  File "main.py", line 34, in <module>
+    main()
+  File "main.py", line 19, in main
+    print(f"WORD1 & WORD2 ARE ANAGRAMS: {functions.is_anagram(word_1, word_2)}")
+  File "/home/runner/A4Q1/functions.py", line 69, in is_anagram
+    return primeify(string1) == primeify(string2)
+  File "/home/runner/A4Q1/functions.py", line 52, in primeify
+    prime_product = char_prime(my_string[0]) * primeify(my_string[1:])
+  File "/home/runner/A4Q1/functions.py", line 31, in char_prime
+    prime_int = primes[my_char]
+KeyError: 'r'  #Correct!
+
+is_anagram() - Test7
+### Check if special characters prints an error message ###
+Enter first word: $TEN
+Enter second word: $NET
+Traceback (most recent call last):
+  File "main.py", line 34, in <module>
+    main()
+  File "main.py", line 19, in main
+    print(f"WORD1 & WORD2 ARE ANAGRAMS: {functions.is_anagram(word_1, word_2)}")
+  File "/home/runner/A4Q1/functions.py", line 69, in is_anagram
+    return primeify(string1) == primeify(string2)
+  File "/home/runner/A4Q1/functions.py", line 52, in primeify
+    prime_product = char_prime(my_string[0]) * primeify(my_string[1:])
+  File "/home/runner/A4Q1/functions.py", line 31, in char_prime
+    prime_int = primes[my_char]
+KeyError: '$'  #Correct!
+
+is_anagram() - Test8
+### Check if numbers prints an error message ###
+Enter first word: 21CENTS
+Enter second word: 21STENC
+Traceback (most recent call last):
+  File "main.py", line 34, in <module>
+    main()
+  File "main.py", line 19, in main
+    print(f"WORD1 & WORD2 ARE ANAGRAMS: {functions.is_anagram(word_1, word_2)}")
+  File "/home/runner/A4Q1/functions.py", line 69, in is_anagram
+    return primeify(string1) == primeify(string2)
+  File "/home/runner/A4Q1/functions.py", line 52, in primeify
+    prime_product = char_prime(my_string[0]) * primeify(my_string[1:])
+  File "/home/runner/A4Q1/functions.py", line 31, in char_prime
+    prime_int = primes[my_char]
+KeyError: '2'  #Correct!
+
+is_anagram() - Test9
+### Check if adding whitespace prints an error message ###
+# Whitespace after the word #
+Enter first word:  RACECAR
+Enter second word: CARRACE
+Traceback (most recent call last):
+  File "main.py", line 34, in <module>
+    main()
+  File "main.py", line 19, in main
+    print(f"WORD1 & WORD2 ARE ANAGRAMS: {functions.is_anagram(word_1, word_2)}")
+  File "/home/runner/A4Q1/functions.py", line 69, in is_anagram
+    return primeify(string1) == primeify(string2)
+  File "/home/runner/A4Q1/functions.py", line 52, in primeify
+    prime_product = char_prime(my_string[0]) * primeify(my_string[1:])
+  File "/home/runner/A4Q1/functions.py", line 31, in char_prime
+    prime_int = primes[my_char]
+KeyError: ' '  #Correct!
+
+is_anagram() - Test10
+### Check if adding whitespace prints an error message ###
+# Whitespace after the word #
+Enter first word: HEART
+Enter second word: EARTH 
+Traceback (most recent call last):
+  File "main.py", line 34, in <module>
+    main()
+  File "main.py", line 19, in main
+    print(f"WORD1 & WORD2 ARE ANAGRAMS: {functions.is_anagram(word_1, word_2)}")
+  File "/home/runner/A4Q1/functions.py", line 69, in is_anagram
+    return primeify(string1) == primeify(string2)
+  File "/home/runner/A4Q1/functions.py", line 52, in primeify
+    prime_product = char_prime(my_string[0]) * primeify(my_string[1:])
+  File "/home/runner/A4Q1/functions.py", line 52, in primeify
+    prime_product = char_prime(my_string[0]) * primeify(my_string[1:])
+  File "/home/runner/A4Q1/functions.py", line 52, in primeify
+    prime_product = char_prime(my_string[0]) * primeify(my_string[1:])
+  [Previous line repeated 3 more times]
+  File "/home/runner/A4Q1/functions.py", line 31, in char_prime
+    prime_int = primes[my_char]
+KeyError: ' '  #Correct!
+
+is_anagram() - Test11
+### Check if adding whitespace prints an error message ###
+# Whitespace after the word #
+Enter first word: RACE CAR
+Enter second word: CAR RACE
+Traceback (most recent call last):
+  File "main.py", line 34, in <module>
+    main()
+  File "main.py", line 19, in main
+    print(f"WORD1 & WORD2 ARE ANAGRAMS: {functions.is_anagram(word_1, word_2)}")
+  File "/home/runner/A4Q1/functions.py", line 69, in is_anagram
+    return primeify(string1) == primeify(string2)
+  File "/home/runner/A4Q1/functions.py", line 52, in primeify
+    prime_product = char_prime(my_string[0]) * primeify(my_string[1:])
+  File "/home/runner/A4Q1/functions.py", line 52, in primeify
+    prime_product = char_prime(my_string[0]) * primeify(my_string[1:])
+  File "/home/runner/A4Q1/functions.py", line 52, in primeify
+    prime_product = char_prime(my_string[0]) * primeify(my_string[1:])
+  [Previous line repeated 2 more times]
+  File "/home/runner/A4Q1/functions.py", line 31, in char_prime
+    prime_int = primes[my_char]
+KeyError: ' '  #Correct!
+
+
+
+"""
+Tests to check if main function in a4_q1.py prints correct output for a series of cases.
+The main function cleans inputted string by removing all whitespace and converting all string to UPPERCASE.
+"""
+a4_q1.py - Test1
+### Check if anagrams print True ###
+Please enter the first word: raceCar
+Please enter the second word: CarRace
+RACECAR and CARRACE are anagrams.  #Correct!
+
+a4_q1.py - Test2
+### Check if anagrams print True ###
+Please enter the first word: HEART
+Please enter the second word: EARTH
+RACECAR and CARRACE are anagrams.  #Correct!
+
+a4_q1.py - Test3
+### Check if anagrams print False ###
+Please enter the first word: Anneth
+Please enter the second word: Ameth
+ANNETH and AMETH are anagrams.  #Correct!
+
+a4_q1.py - Test4
+### Check if anagrams print False ###
+Please enter the first word: KINGSTON
+Please enter the second word: TORONTO
+KINGSTON and TORONTO are anagrams.  #Correct!
+
+a4_q1.py - Test5
+### Check if adding whitespace prints True ###
+Please enter the first word:           HEART
+Please enter the second word: E   A  R T  H
+HEART and EARTH are anagrams.  #Correct!
+
+a4_q1.py - Test6
+### Check if numbers print an error message ###
+Please enter the first word: HE110
+Please enter the second word: 011EH
+Invalid input! Please enter words containing only the alphabets.  #Correct!
+
+a4_q1.py - Test7
+### Check if special characters print an error message ###
+Please enter the first word: $TEN
+Please enter the second word: TEN$
+Invalid input! Please enter words containing only the alphabets.  #Correct!
+
+
+
+"""
+Tests to check if radix_sort function sorts a list of numbers in ascending order.
+"""
+radix_sort() - Test1
+### Check if unsorted list gets sorted ###
+Unsorted List: [1, 620, 5, 78, 52, 10, 8, 3]
+Radix Sorted List: [1, 3, 5, 8, 10, 52, 78, 620]  #Correct!
+
+radix_sort() - Test2
+### Check if unsorted list gets sorted ###
+Unsorted List: [69, 90, 3000343, 7, 93, 95, 34, 43, 67, 0, 1, 2, 4]
+Radix Sorted List: [0, 1, 2, 4, 7, 34, 43, 67, 69, 90, 93, 95, 3000343]  #Correct!
+
+radix_sort() - Test3
+### Check if unsorted list with duplicates values gets sorted ###
+Unsorted List: [0, 1, 3, 5, 7, 7, 8, 23, 45, 67, 49, 99, 99, 54]
+Radix Sorted List: [0, 1, 3, 5, 7, 7, 8, 23, 45, 49, 54, 67, 99, 99]  #Correct!
+
+radix_sort() - Test4
+### Check if unsorted list with negative values gets sorted ###
+Unsorted List: (10, 20, 9, 4, -3, 11, 23)
+Radix Sorted List: [4, 9, 10, 11, 20, 23, -3]  #Correct!
+# Here, the function sorts natural numbers as normal.
+# However, the function does not know what to do with negatives, so it get thrown at the end.
+# This is not a problem because we will be only dealing with natural.  
+
+radix_sort() - Test5
+### Check if unsorted list with float values gets sorted ###
+Unsorted List: (10, 20, 9, 4.9, 4.67, 3, 11, 23, 18)
+Traceback (most recent call last):
+  File "main.py", line 13, in <module>
+    print(f"Radix Sorted List: {radix_sort(lst)}")
+  File "/home/runner/A4Q2/functions.py", line 85, in radix_sort
+    return recursive_radix_sort(list_of_primes, 1, max_value)
+  File "/home/runner/A4Q2/functions.py", line 112, in recursive_radix_sort
+    buckets[digit].append(num)
+TypeError: list indices must be integers or slices, not float  #Correct!
+# We get an error as we should, because we can sort decimals with radix.
+# This is not a problem because we will be only dealing with natural.
+
+
+radix_sort() - Test6
+### Check if other data structures will return error ###
+# Test using a set instead of a list #
+Unsorted List: {0, 1, 34, 3, 67, 5, 99, 7, 8, 45, 49, 54, 23, 90}
+<class 'set'>
+Radix Sorted List: [0, 1, 3, 5, 7, 8, 23, 34, 45, 49, 54, 67, 90, 99]
+<class 'list'>  #Correct!
+# Works because it is simply transversing through all the number and sorting them into buckets.
+
+radix_sort() - Test7
+### Check if other data structures will return error ###
+# Test using a tuple instead of a list #
+Unsorted List: (0, 1, 3, 5, 7, 7, 8, 23, 45, 67, 49, 99, 99, 54, 90, 34, 54)
+<class 'tuple'>
+Radix Sorted List: [0, 1, 3, 5, 7, 7, 8, 23, 34, 45, 49, 54, 54, 67, 90, 99, 99]
+<class 'list'>  #Correct!
+# Works because it is simply transversing through all the number and sorting them into buckets.
+
+
+
+"""
+Tests to check if main function in a4_q2.py prints correct output for a series of cases.
+The main function prints unsorted list of unique prime numbers and then sorted list of unique prime numbers.
+"""
+a4_q2.py - Test1
+### Check if anagrams print out unsorted and sorted list ###
+Please enter the first word: Vase
+Please enter the second word: Save
+VASE and SAVE are anagrams.
+
+Unsorted List of Unique Prime Numbers for Anagram: [79, 2, 67, 11]
+Sorted List of Unique Prime Numbers for Anagram: [2, 11, 67, 79]  #Correct!
+
+a4_q2.py - Test2
+### Check if anagrams print out unsorted and sorted list ###
+Please enter the first word: listen
+Please enter the second word: SILENT
+LISTEN and SILENT are anagrams.
+
+Unsorted List of Unique Prime Numbers for Anagram: [37, 23, 67, 71, 11, 43]
+Sorted List of Unique Prime Numbers for Anagram: [11, 23, 37, 43, 67, 71]  #Correct!
+
+a4_q2.py - Test3
+### Check if non-anagrams print out unsorted and sorted list ###
+Please enter the first word: ANNETH
+Please enter the second word: SIVAKUMAR
+ANNETH and SIVAKUMAR are not anagrams.
+
+Unsorted List of Unique Prime Numbers for ANNETH: [2, 43, 43, 11, 71, 19]
+Sorted List of Unique Prime Numbers for ANNETH: [2, 11, 19, 43, 43, 71]
+
+Unsorted List of Unique Prime Numbers for SIVAKUMAR: [67, 23, 79, 2, 31, 73, 41, 2, 61]
+Sorted List of Unique Prime Numbers for SIVAKUMAR: [2, 2, 23, 31, 41, 61, 67, 73, 79]  #Correct!
+
+a4_q2.py - Test4
+### Check if non-anagrams print out unsorted and sorted list ###
+Please enter the first word: Apple
+Please enter the second word: orange
+APPLE and ORANGE are not anagrams.
+
+Unsorted List of Unique Prime Numbers for APPLE: [2, 53, 53, 37, 11]
+Sorted List of Unique Prime Numbers for APPLE: [2, 11, 37, 53, 53]
+
+Unsorted List of Unique Prime Numbers for ORANGE: [47, 61, 2, 43, 17, 11]
+Sorted List of Unique Prime Numbers for ORANGE: [2, 11, 17, 43, 47, 61]  #Correct!
+
+a4_q2.py - Test5
+### Check if words with symbols prints an error ###
+Please enter the first word: COOKIES!
+Please enter the second word: $MONEY
+Invalid input! Please enter words containing only the alphabets.  #Correct!
+
+a4_q2.py - Test6
+### Check if words with number prints an error ###
+Please enter the first word: BI11S
+Please enter the second word: GTRR35
+Invalid input! Please enter words containing only the alphabets.  #Correct!
